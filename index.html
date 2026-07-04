@@ -7,287 +7,287 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg: #15110e;
-    --bg-2: #1c1713;
-    --card: #201a16;
-    --line: #3a2f24;
-    --gold-1: #fff3d6;
-    --gold-2: #f0cd7e;
-    --gold-3: #d9a642;
-    --gold-4: #a5731f;
-    --text: #d9cfc0;
-    --text-dim: #8f8271;
-    --text-faint: #5f574a;
-  }
+  :root{
+    --bg: #15110e;
+    --bg-2: #1c1713;
+    --card: #201a16;
+    --line: #3a2f24;
+    --gold-1: #fff3d6;
+    --gold-2: #f0cd7e;
+    --gold-3: #d9a642;
+    --gold-4: #a5731f;
+    --text: #d9cfc0;
+    --text-dim: #8f8271;
+    --text-faint: #5f574a;
+  }
 
-  *{ box-sizing: border-box; }
+  *{ box-sizing: border-box; }
 
-  html,body{
-    margin:0; padding:0;
-    background: radial-gradient(120% 90% at 15% -10%, #241d17 0%, var(--bg) 45%, #100d0a 100%);
-    color: var(--text);
-    font-family: 'Manrope', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+  html,body{
+    margin:0; padding:0;
+    background: radial-gradient(120% 90% at 15% -10%, #241d17 0%, var(--bg) 45%, #100d0a 100%);
+    color: var(--text);
+    font-family: 'Manrope', sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
 
-  .noise{
-    pointer-events:none;
-    position: fixed; inset:0;
-    opacity:.035;
-    mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-    z-index: 0;
-  }
+  .noise{
+    pointer-events:none;
+    position: fixed; inset:0;
+    opacity:.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    z-index: 0;
+  }
 
-  .wrap{
-    position: relative;
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 96px 28px 120px;
-    z-index: 1;
-  }
+  .wrap{
+    position: relative;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 96px 28px 120px;
+    z-index: 1;
+  }
 
-  /* ---- signature: gold seal / paw mark ---- */
-  .seal{
-    width: 84px; height: 84px;
-    margin: 0 auto 36px;
-    position: relative;
-  }
-  .seal svg{ width:100%; height:100%; display:block; }
-  .seal-ring{
-    fill: none;
-    stroke: url(#ringGrad);
-    stroke-width: 1;
-    opacity: .55;
-  }
+  /* ---- signature: gold seal / paw mark ---- */
+  .seal{
+    width: 84px; height: 84px;
+    margin: 0 auto 36px;
+    position: relative;
+  }
+  .seal svg{ width:100%; height:100%; display:block; }
+  .seal-ring{
+    fill: none;
+    stroke: url(#ringGrad);
+    stroke-width: 1;
+    opacity: .55;
+  }
 
-  .eyebrow{
-    text-align:center;
-    font-size: 11.5px;
-    letter-spacing: .32em;
-    text-transform: uppercase;
-    color: var(--gold-3);
-    margin: 0 0 18px;
-    font-weight: 600;
-  }
+  .eyebrow{
+    text-align:center;
+    font-size: 11.5px;
+    letter-spacing: .32em;
+    text-transform: uppercase;
+    color: var(--gold-3);
+    margin: 0 0 18px;
+    font-weight: 600;
+  }
 
-  h1{
-    font-family:'Fraunces', serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-size: clamp(34px, 6vw, 54px);
-    line-height: 1.08;
-    text-align:center;
-    margin: 0 0 14px;
-    letter-spacing: -0.01em;
-    background: linear-gradient(100deg, var(--gold-4) 0%, var(--gold-2) 28%, var(--gold-1) 50%, var(--gold-2) 72%, var(--gold-4) 100%);
-    background-size: 220% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: shimmer 7s ease-in-out infinite;
-  }
+  h1{
+    font-family:'Fraunces', serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.08;
+    text-align:center;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(100deg, var(--gold-4) 0%, var(--gold-2) 28%, var(--gold-1) 50%, var(--gold-2) 72%, var(--gold-4) 100%);
+    background-size: 220% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: shimmer 7s ease-in-out infinite;
+  }
 
-  @keyframes shimmer{
-    0%,100%{ background-position: 0% 50%; }
-    50%{ background-position: 100% 50%; }
-  }
+  @keyframes shimmer{
+    0%,100%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+  }
 
-  .effective-date{
-    text-align:center;
-    color: var(--text-dim);
-    font-size: 14px;
-    margin: 0 0 56px;
-    letter-spacing: .02em;
-  }
-  .effective-date span{ color: var(--gold-3); font-weight:600; }
+  .effective-date{
+    text-align:center;
+    color: var(--text-dim);
+    font-size: 14px;
+    margin: 0 0 56px;
+    letter-spacing: .02em;
+  }
+  .effective-date span{ color: var(--gold-3); font-weight:600; }
 
-  .divider{
-    width: 100%;
-    height: 1px;
-    margin: 0 0 64px;
-    background: linear-gradient(90deg, transparent, var(--line) 20%, var(--gold-4) 50%, var(--line) 80%, transparent);
-    opacity:.6;
-  }
+  .divider{
+    width: 100%;
+    height: 1px;
+    margin: 0 0 64px;
+    background: linear-gradient(90deg, transparent, var(--line) 20%, var(--gold-4) 50%, var(--line) 80%, transparent);
+    opacity:.6;
+  }
 
-  .intro{
-    font-size: 17px;
-    line-height: 1.75;
-    color: var(--text);
-    margin-bottom: 64px;
-    padding: 28px 30px;
-    border-left: 2px solid var(--gold-4);
-    background: linear-gradient(180deg, rgba(217,166,66,.06), rgba(217,166,66,0));
-    border-radius: 2px;
-  }
+  .intro{
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 64px;
+    padding: 28px 30px;
+    border-left: 2px solid var(--gold-4);
+    background: linear-gradient(180deg, rgba(217,166,66,.06), rgba(217,166,66,0));
+    border-radius: 2px;
+  }
 
-  section.article{
-    margin-bottom: 52px;
-    position: relative;
-    padding-left: 0;
-  }
+  section.article{
+    margin-bottom: 52px;
+    position: relative;
+    padding-left: 0;
+  }
 
-  .article-head{
-    display:flex;
-    align-items: baseline;
-    gap: 14px;
-    margin-bottom: 16px;
-  }
+  .article-head{
+    display:flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
 
-  .mark{
-    font-family:'Fraunces', serif;
-    font-size: 15px;
-    font-weight: 600;
-    flex: none;
-    width: 34px; height:34px;
-    border-radius: 50%;
-    display:flex; align-items:center; justify-content:center;
-    border: 1px solid var(--gold-4);
-    color: var(--gold-2);
-    background: radial-gradient(circle at 30% 30%, rgba(240,205,126,.14), transparent 70%);
-  }
+  .mark{
+    font-family:'Fraunces', serif;
+    font-size: 15px;
+    font-weight: 600;
+    flex: none;
+    width: 34px; height:34px;
+    border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    border: 1px solid var(--gold-4);
+    color: var(--gold-2);
+    background: radial-gradient(circle at 30% 30%, rgba(240,205,126,.14), transparent 70%);
+  }
 
-  h2{
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    font-size: 22px;
-    letter-spacing: -0.005em;
-    margin: 0;
-    background: linear-gradient(120deg, var(--gold-2), var(--gold-1) 45%, var(--gold-3));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+  h2{
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -0.005em;
+    margin: 0;
+    background: linear-gradient(120deg, var(--gold-2), var(--gold-1) 45%, var(--gold-3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
 
-  .article p{
-    font-size: 15.5px;
-    line-height: 1.85;
-    color: var(--text);
-    margin: 0 0 14px;
-    padding-left: 48px;
-  }
+  .article p{
+    font-size: 15.5px;
+    line-height: 1.85;
+    color: var(--text);
+    margin: 0 0 14px;
+    padding-left: 48px;
+  }
 
-  .article p:last-child{ margin-bottom:0; }
+  .article p:last-child{ margin-bottom:0; }
 
-  .sublist{
-    padding-left: 48px;
-    display: grid;
-    gap: 18px;
-    margin-top: 20px;
-  }
+  .sublist{
+    padding-left: 48px;
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+  }
 
-  .sublist-item{
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    padding: 18px 20px;
-    background: linear-gradient(160deg, rgba(255,255,255,.015), rgba(0,0,0,.1));
-    transition: border-color .3s ease, transform .3s ease;
-  }
-  .sublist-item:hover{
-    border-color: var(--gold-4);
-    transform: translateY(-1px);
-  }
+  .sublist-item{
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: linear-gradient(160deg, rgba(255,255,255,.015), rgba(0,0,0,.1));
+    transition: border-color .3s ease, transform .3s ease;
+  }
+  .sublist-item:hover{
+    border-color: var(--gold-4);
+    transform: translateY(-1px);
+  }
 
-  .sublist-item .label{
-    display:block;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--gold-2);
-    margin-bottom: 6px;
-    letter-spacing: .01em;
-  }
+  .sublist-item .label{
+    display:block;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gold-2);
+    margin-bottom: 6px;
+    letter-spacing: .01em;
+  }
 
-  .sublist-item .body{
-    font-size: 14.5px;
-    line-height: 1.7;
-    color: var(--text-dim);
-  }
+  .sublist-item .body{
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--text-dim);
+  }
 
-  .accept-box{
-    margin-top: 72px;
-    padding: 34px 32px;
-    border-radius: 14px;
-    position: relative;
-    background: linear-gradient(165deg, #241c14, #171310);
-    border: 1px solid var(--gold-4);
-    box-shadow: 0 0 0 1px rgba(217,166,66,.05), 0 20px 50px -20px rgba(0,0,0,.6);
-  }
-  .accept-box::before{
-    content:"";
-    position:absolute; inset:-1px;
-    border-radius: 14px;
-    padding:1px;
-    background: linear-gradient(135deg, var(--gold-2), transparent 40%, transparent 60%, var(--gold-4));
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    opacity: .5;
-    pointer-events: none;
-  }
-  .accept-box p{
-    padding-left:0;
-    font-size: 15px;
-    line-height: 1.8;
-    color: var(--text);
-    margin:0;
-  }
-  .accept-box .stamp{
-    font-family:'Fraunces', serif;
-    font-style: italic;
-    font-size: 13px;
-    color: var(--gold-3);
-    margin-top: 16px;
-    display:block;
-  }
+  .accept-box{
+    margin-top: 72px;
+    padding: 34px 32px;
+    border-radius: 14px;
+    position: relative;
+    background: linear-gradient(165deg, #241c14, #171310);
+    border: 1px solid var(--gold-4);
+    box-shadow: 0 0 0 1px rgba(217,166,66,.05), 0 20px 50px -20px rgba(0,0,0,.6);
+  }
+  .accept-box::before{
+    content:"";
+    position:absolute; inset:-1px;
+    border-radius: 14px;
+    padding:1px;
+    background: linear-gradient(135deg, var(--gold-2), transparent 40%, transparent 60%, var(--gold-4));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .5;
+    pointer-events: none;
+  }
+  .accept-box p{
+    padding-left:0;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text);
+    margin:0;
+  }
+  .accept-box .stamp{
+    font-family:'Fraunces', serif;
+    font-style: italic;
+    font-size: 13px;
+    color: var(--gold-3);
+    margin-top: 16px;
+    display:block;
+  }
 
-  .contact{
-    margin-top: 64px;
-    text-align:center;
-  }
-  .contact .label{
-    font-size: 11px;
-    letter-spacing: .28em;
-    text-transform: uppercase;
-    color: var(--text-faint);
-    margin-bottom: 14px;
-  }
-  .contact a{
-    font-family:'Fraunces', serif;
-    font-size: 19px;
-    font-weight: 600;
-    text-decoration: none;
-    background: linear-gradient(100deg, var(--gold-4), var(--gold-1), var(--gold-4));
-    background-size: 200% 100%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    transition: background-position .5s ease;
-    border-bottom: 1px solid var(--gold-4);
-    padding-bottom: 3px;
-  }
-  .contact a:hover{ background-position: 100% 0; }
+  .contact{
+    margin-top: 64px;
+    text-align:center;
+  }
+  .contact .label{
+    font-size: 11px;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+    margin-bottom: 14px;
+  }
+  .contact a{
+    font-family:'Fraunces', serif;
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    background: linear-gradient(100deg, var(--gold-4), var(--gold-1), var(--gold-4));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: background-position .5s ease;
+    border-bottom: 1px solid var(--gold-4);
+    padding-bottom: 3px;
+  }
+  .contact a:hover{ background-position: 100% 0; }
 
-  footer{
-    margin-top: 80px;
-    text-align:center;
-    font-size: 12px;
-    letter-spacing: .08em;
-    color: var(--text-faint);
-    text-transform: uppercase;
-  }
-  footer .paw{ display:block; margin: 0 auto 14px; width: 20px; opacity:.5; }
+  footer{
+    margin-top: 80px;
+    text-align:center;
+    font-size: 12px;
+    letter-spacing: .08em;
+    color: var(--text-faint);
+    text-transform: uppercase;
+  }
+  footer .paw{ display:block; margin: 0 auto 14px; width: 20px; opacity:.5; }
 
-  @media (max-width: 560px){
-    .wrap{ padding: 64px 18px 90px; }
-    .article p, .sublist{ padding-left: 0; }
-    .article-head{ margin-bottom: 12px; }
-  }
+  @media (max-width: 560px){
+    .wrap{ padding: 64px 18px 90px; }
+    .article p, .sublist{ padding-left: 0; }
+    .article-head{ margin-bottom: 12px; }
+  }
 
-  @media (prefers-reduced-motion: reduce){
-    h1{ animation: none; }
-    .sublist-item{ transition: none; }
-  }
+  @media (prefers-reduced-motion: reduce){
+    h1{ animation: none; }
+    .sublist-item{ transition: none; }
+  }
 </style>
 </head>
 <body>
@@ -296,103 +296,101 @@
 
 <div class="wrap">
 
-  <div class="seal">
-    <svg viewBox="0 0 84 84">
-      <defs>
-        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f0cd7e"/>
-          <stop offset="100%" stop-color="#a5731f"/>
-        </linearGradient>
-        <linearGradient id="pawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#fff3d6"/>
-          <stop offset="55%" stop-color="#f0cd7e"/>
-          <stop offset="100%" stop-color="#a5731f"/>
-        </linearGradient>
-      </defs>
-      <circle class="seal-ring" cx="42" cy="42" r="39"/>
-      <circle class="seal-ring" cx="42" cy="42" r="34" opacity="0.3"/>
-      <g fill="url(#pawGrad)">
-        <ellipse cx="42" cy="50" rx="13" ry="10.5"/>
-        <ellipse cx="27" cy="34" rx="6" ry="7.5"/>
-        <ellipse cx="38" cy="26" rx="6" ry="7.5"/>
-        <ellipse cx="49" cy="26" rx="6" ry="7.5"/>
-        <ellipse cx="58" cy="34" rx="6" ry="7.5"/>
-      </g>
-    </svg>
-  </div>
+  <div class="seal">
+    <svg viewBox="0 0 84 84">
+      <defs>
+        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#f0cd7e"/>
+          <stop offset="100%" stop-color="#a5731f"/>
+        </linearGradient>
+        <linearGradient id="pawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#fff3d6"/>
+          <stop offset="55%" stop-color="#f0cd7e"/>
+          <stop offset="100%" stop-color="#a5731f"/>
+        </linearGradient>
+      </defs>
+      <circle class="seal-ring" cx="42" cy="42" r="39"/>
+      <circle class="seal-ring" cx="42" cy="42" r="34" opacity="0.3"/>
+      <g fill="url(#pawGrad)">
+        <ellipse cx="42" cy="50" rx="13" ry="10.5"/>
+        <ellipse cx="27" cy="34" rx="6" ry="7.5"/>
+        <ellipse cx="38" cy="26" rx="6" ry="7.5"/>
+        <ellipse cx="49" cy="26" rx="6" ry="7.5"/>
+        <ellipse cx="58" cy="34" rx="6" ry="7.5"/>
+      </g>
+    </svg>
+  </div>
 
-  <p class="eyebrow">PawBase · Dokumen Resmi</p>
-  <h1>Kebijakan Privasi<br>& Ketentuan Layanan</h1>
-  <p class="effective-date">Tanggal Efektif — <span>5 Juli 2026</span></p>
+  <p class="eyebrow">PawBase · Dokumen Resmi</p>
+  <h1>Kebijakan Privasi<br>& Ketentuan Layanan</h1>
+  <p class="effective-date">Tanggal Efektif — <span>5 Juli 2026</span></p>
 
-  <div class="divider"></div>
+  <div class="divider"></div>
 
-  <p class="intro">Selamat datang di Pawbase! Kami sangat menghargai kepercayaan Anda dalam menggunakan platform kami untuk mendukung kesehatan dan kesejahteraan hewan kesayangan Anda. Kami berkomitmen untuk menyediakan pengalaman pengguna yang aman, nyaman, dan transparan.</p>
+  <p class="intro">Selamat datang di Pawbase! Kami sangat menghargai kepercayaan Anda dalam menggunakan platform kami untuk mendukung kesehatan dan kesejahteraan hewan kesayangan Anda. Kami berkomitmen untuk menyediakan pengalaman pengguna yang aman, nyaman, dan transparan.</p>
 
-  <section class="article">
-    <div class="article-head">
-      <span class="mark">01</span>
-      <h2>Komitmen Kualitas Layanan</h2>
-    </div>
-    <p>Pawbase dikembangkan dengan dedikasi tinggi untuk memberikan solusi terbaik bagi para pencinta hewan. Seiring dengan upaya kami untuk terus berinovasi dan memberikan fitur-fitur baru, harap dimaklumi hal-hal berikut:</p>
-    <div class="sublist">
-      <div class="sublist-item">
-        <span class="label">Pengembangan Berkelanjutan</span>
-        <span class="body">Kami secara rutin melakukan pembaruan sistem dan penyesuaian fitur untuk meningkatkan performa serta fungsionalitas aplikasi.</span>
-      </div>
-      <div class="sublist-item">
-        <span class="label">Stabilitas Sistem</span>
-        <span class="body">Meskipun kami berupaya keras menjaga kestabilan aplikasi, ada kemungkinan kendala teknis minor dapat terjadi selama proses pembaruan atau penyesuaian sistem.</span>
-      </div>
-      <div class="sublist-item">
-        <span class="label">Apresiasi Masukan</span>
-        <span class="body">Kami sangat menghargai partisipasi Anda. Jika Anda menemukan ketidaksesuaian atau memiliki masukan terkait sistem, mohon segera melaporkannya kepada tim kami agar dapat diperbaiki demi kenyamanan bersama.</span>
-      </div>
-    </div>
-  </section>
+  <section class="article">
+    <div class="article-head">
+      <span class="mark">01</span>
+      <h2>Komitmen Kualitas Layanan</h2>
+    </div>
+    <p>Pawbase dikembangkan dengan dedikasi tinggi untuk memberikan solusi terbaik bagi para pencinta hewan. Seiring dengan upaya kami untuk terus berinovasi dan memberikan fitur-fitur baru, harap dimaklumi hal-hal berikut:</p>
+    <div class="sublist">
+      <div class="sublist-item">
+        <span class="label">Pengembangan Berkelanjutan</span>
+        <span class="body">Kami secara rutin melakukan pembaruan sistem dan penyesuaian fitur untuk meningkatkan performa serta fungsionalitas aplikasi.</span>
+      </div>
+      <div class="sublist-item">
+        <span class="label">Stabilitas Sistem</span>
+        <span class="body">Meskipun kami berupaya keras menjaga kestabilan aplikasi, ada kemungkinan kendala teknis minor dapat terjadi selama proses pembaruan atau penyesuaian sistem.</span>
+      </div>
+      <div class="sublist-item">
+        <span class="label">Apresiasi Masukan</span>
+        <span class="body">Kami sangat menghargai partisipasi Anda. Jika Anda menemukan ketidaksesuaian atau memiliki masukan terkait sistem, mohon segera melaporkannya kepada tim kami agar dapat diperbaiki demi kenyamanan bersama.</span>
+      </div>
+    </div>
+  </section>
 
-  <section class="article">
-    <div class="article-head">
-      <span class="mark">02</span>
-      <h2>Privasi & Keamanan Data</h2>
-    </div>
-    <p>Kami mengelola informasi Anda—termasuk profil hewan dan data interaksi—dengan standar perlindungan data yang ketat. Informasi tersebut digunakan semata-mata untuk meningkatkan layanan dan memfasilitasi interaksi yang relevan di platform Pawbase.</p>
-  </section>
+  <section class="article">
+    <div class="article-head">
+      <span class="mark">02</span>
+      <h2>Privasi & Keamanan Data</h2>
+    </div>
+    <p>Kami mengelola informasi Anda—termasuk profil hewan dan data interaksi—dengan standar perlindungan data yang ketat. Informasi tersebut digunakan semata-mata untuk meningkatkan layanan dan memfasilitasi interaksi yang relevan di platform Pawbase.</p>
+  </section>
 
-  <section class="article">
-    <div class="article-head">
-      <span class="mark">03</span>
-      <h2>Etika Komunitas (Paw Social)</h2>
-    </div>
-    <p>Paw Social adalah ruang berbagi yang mengutamakan rasa saling menghormati. Konten yang Anda bagikan di forum adalah tanggung jawab pengguna. Kami menerapkan moderasi demi menjaga ekosistem komunitas tetap positif dan edukatif bagi semua pemilik hewan.</p>
-  </section>
+  <section class="article">
+    <div class="article-head">
+      <span class="mark">03</span>
+      <h2>Etika Komunitas (Paw Social)</h2>
+    </div>
+    <p>Paw Social adalah ruang berbagi yang mengutamakan rasa saling menghormati. Konten yang Anda bagikan di forum adalah tanggung jawab pengguna. Kami menerapkan moderasi demi menjaga ekosistem komunitas tetap positif dan edukatif bagi semua pemilik hewan.</p>
+  </section>
 
-  <div class="accept-box">
-    <p>Dengan mengakses dan menggunakan aplikasi Pawbase, Anda menyatakan telah memahami bahwa kami terus melakukan pengembangan berkelanjutan guna memberikan kualitas layanan terbaik, serta setuju dengan kebijakan privasi yang berlaku.</p>
-    <span class="stamp">— Tim Pawbase</span>
-  </div>
+  <div class="accept-box">
+    <p>Dengan mengakses dan menggunakan aplikasi Pawbase, Anda menyatakan telah memahami bahwa kami terus melakukan pengembangan berkelanjutan guna memberikan kualitas layanan terbaik, serta setuju dengan kebijakan privasi yang berlaku.</p>
+    <span class="stamp">— Tim Pawbase</span>
+  </div>
 
-  <div class="contact">
-    <p class="label">Kontak Kami</p>
-    <a href="mailto:aflidiah1704@gmail.com">aflidiah1704@gmail.com</a>
-  </div>
+  <div class="contact">
+    <p class="label">Kontak Kami</p>
+    <a href="mailto:aflidiah1704@gmail.com">aflidiah1704@gmail.com</a>
+  </div>
 
-  <footer>
-    <svg class="paw" viewBox="0 0 84 84" fill="none">
-      <g fill="#8f8271">
-        <ellipse cx="42" cy="50" rx="13" ry="10.5"/>
-        <ellipse cx="27" cy="34" rx="6" ry="7.5"/>
-        <ellipse cx="38" cy="26" rx="6" ry="7.5"/>
-        <ellipse cx="49" cy="26" rx="6" ry="7.5"/>
-        <ellipse cx="58" cy="34" rx="6" ry="7.5"/>
-      </g>
-    </svg>
-    PawBase © 2026
-  </footer>
+  <footer>
+    <svg class="paw" viewBox="0 0 84 84" fill="none">
+      <g fill="#8f8271">
+        <ellipse cx="42" cy="50" rx="13" ry="10.5"/>
+        <ellipse cx="27" cy="34" rx="6" ry="7.5"/>
+        <ellipse cx="38" cy="26" rx="6" ry="7.5"/>
+        <ellipse cx="49" cy="26" rx="6" ry="7.5"/>
+        <ellipse cx="58" cy="34" rx="6" ry="7.5"/>
+      </g>
+    </svg>
+    PawBase © 2026
+  </footer>
 
 </div>
 
 </body>
 </html>
-
-gini 
